@@ -7,5 +7,12 @@ export default defineSchema({
     name: v.string(),
     stars: v.number(),
     url: v.string(),
+    category: v.string(),
+    price: v.number(),
+    featuredImage: v.optional(v.id("_storage")),
+  }),
+  categories: defineTable({
+    cateoryName: v.string(),
+    products: v.array(v.id("products")),
   }),
 });

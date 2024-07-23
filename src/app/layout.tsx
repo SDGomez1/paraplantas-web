@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import PostHogPageView from "@/components/PostHogProvider";
 import Providers from "./Providers";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const inter = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Paraplantas",
+  title: "Paraplantas | Pagina principal",
   description: "Tu web para encontrar todo lo que necesitas en paraplantas",
 };
 
