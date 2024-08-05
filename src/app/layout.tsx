@@ -4,6 +4,7 @@ import "./globals.css";
 import PostHogPageView from "@/components/PostHogProvider";
 import Providers from "./Providers";
 import { cn } from "@/lib/utils";
+import { Suspense } from "react";
 
 const inter = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -26,8 +27,10 @@ export default function RootLayout({
             inter.variable
           )}
         >
-          <PostHogPageView />
-          {children}
+          <Suspense>
+            <PostHogPageView />
+            {children}
+          </Suspense>
         </body>
       </Providers>
     </html>
